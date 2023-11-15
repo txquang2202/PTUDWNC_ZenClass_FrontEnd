@@ -92,11 +92,14 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/api/v1/signUp", {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://ptudwnc-zenlab-backend.onrender.com/api/v1/signUp",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       if (response.status === 200) {
         toast.success("Register successful");

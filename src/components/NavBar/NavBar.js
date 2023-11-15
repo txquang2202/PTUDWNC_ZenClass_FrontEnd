@@ -30,7 +30,7 @@ const Navbar = () => {
         }
         setId(session.userData._id);
         const response = await axios.get(
-          `http://localhost:8080/api/v1/getprofile/${session.userData._id}`
+          `https://ptudwnc-zenlab-backend.onrender.com/api/v1/getprofile/${session.userData._id}`
         );
         const userData = response.data.user;
 

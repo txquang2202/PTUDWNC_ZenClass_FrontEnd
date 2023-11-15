@@ -52,7 +52,7 @@ function ResponsiveDrawer(props) {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/getprofile/${id}`
+          `https://ptudwnc-zenlab-backend.onrender.com/api/v1/getprofile/${id}`
         );
         const userData = response.data.user;
         const date = new Date(userData.birthdate).toISOString().split("T")[0];
@@ -119,7 +119,7 @@ function ResponsiveDrawer(props) {
 
       // Make a PUT request with the FormData
       const response = await axios.put(
-        `http://localhost:8080/api/v1/editprofile/${id}`,
+        `https://ptudwnc-zenlab-backend.onrender.com/api/v1/editprofile/${id}`,
         data
       );
       toast.success("Update successful");

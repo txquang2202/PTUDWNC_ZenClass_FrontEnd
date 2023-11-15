@@ -20,7 +20,7 @@ function HomePage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/getprofile/${id}`
+          `https://ptudwnc-zenlab-backend.onrender.com/api/v1/getprofile/${id}`
         );
         const userData = response.data.user;
         if (userData.img) {
